@@ -88,6 +88,13 @@ resource "aws_security_group" "web-node" {
     "0.0.0.0/0"]
   }
   ingress {
+    from_port = 443
+    to_port   = 443
+    protocol  = "tcp"
+    cidr_blocks = [
+    "0.0.0.0/0"]
+  }
+  ingress {
     from_port = 22
     to_port   = 22
     protocol  = "tcp"
@@ -288,7 +295,7 @@ resource "aws_s3_bucket" "flowbucket" {
 }
 
 output "ec2_public_dns" {
-  description = "Web Host Public DNS name"
+  description = "Web Host Public DNS name 2"
   value       = aws_instance.web_host.public_dns
 }
 
