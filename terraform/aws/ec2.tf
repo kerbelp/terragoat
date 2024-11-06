@@ -288,7 +288,7 @@ resource "aws_s3_bucket" "flowbucket" {
 }
 
 output "ec2_public_dns" {
-  description = "Web Host Public DNS name"
+  description = "Web Host Public DNS name 123"
   value       = aws_instance.web_host.public_dns
 }
 
