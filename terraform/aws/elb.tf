@@ -10,8 +10,8 @@ resource "aws_elb" "weblb" {
   }
 
   health_check {
-    healthy_threshold   = 2
-    unhealthy_threshold = 2
+    healthy_threshold   = 3
+    unhealthy_threshold = 3
     timeout             = 3
     target              = "HTTP:8000/"
     interval            = 30
